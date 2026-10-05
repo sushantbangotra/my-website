@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Sushant Bangotra - B.Tech Electrical Engineering student at GCET Kashmir, interested in Python, programming and web development.">
+
+    <title>Sushant Bangotra | Electrical Engineering Student</title>
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+
+        ::selection {
+            background: #38bdf8;
+            color: #020617;
+        }
+
+
+        /* =====================================================
+           ANIMATED BACKGROUND
+        ===================================================== */
+
+        body::before,
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            filter: blur(160px);
+
+            opacity: 0.15;
+
+            z-index: -1;
+
+            animation: glow 10s infinite alternate;
+
+        }
+
+
+        body::before {
+
+            background: #0ea5e9;
+
+            top: -180px;
+            left: -150px;
+
+        }
+
+
+        body::after {
+
+            background: #6366f1;
+
+            bottom: -180px;
+            right: -150px;
+
+            animation-delay: 3s;
+
+        }
+
+
+        @keyframes glow {
+
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(180px, 120px);
+            }
+
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            width: 100%;
+
+            padding: 18px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(2, 6, 23, 0.78);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            z-index: 1000;
+
+        }
+
+
+        .logo {
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            color: #38bdf8;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 28px;
+
+        }
+
+
+        nav ul a {
+
+            color: #cbd5e1;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+
+            position: relative;
+
+        }
+
+
+        nav ul a::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 0;
+
+            height: 2px;
+
+            background: #38bdf8;
+
+            left: 0;
+
+            bottom: -7px;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav ul a:hover,
+        nav ul a.active-link {
+
+            color: #38bdf8;
+
+        }
+
+
+        nav ul a:hover::after,
+        nav ul a.active-link::after {
+
+            width: 100%;
+
+        }
+
+
+        .menu {
+
+            display: none;
+
+            font-size: 28px;
+
+            cursor: pointer;
+
+            color: #38bdf8;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 120px 8% 70px;
+
+        }
+
+
+        .hero-container {
+
+            width: 100%;
+
+            max-width: 1150px;
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .hero-text {
+
+            animation: fadeLeft 1s ease;
+
+        }
+
+
+        @keyframes fadeLeft {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateX(-35px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateX(0);
+
+            }
+
+        }
+
+
+        .hero-tag {
+
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            border: 1px solid rgba(56,189,248,0.3);
+
+            background: rgba(56,189,248,0.08);
+
+            border-radius: 30px;
+
+            color: #38bdf8;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 60px;
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .blue {
+
+            color: #38bdf8;
+
+        }
+
+
+        .hero h2 {
+
+            color: #e2e8f0;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero-description {
+
+            color: #94a3b8;
+
+            max-width: 650px;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           HERO BUTTONS
+        ===================================================== */
+
+        .buttons {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .primary {
+
+            background: #38bdf8;
+
+            color: #020617;
+
+        }
+
+
+        .secondary {
+
+            border: 1px solid #38bdf8;
+
+            color: #38bdf8;
+
+        }
+
+
+        .button:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+
+                0 12px 30px rgba(56,189,248,0.22);
+
+        }
+
+
+        /* =====================================================
+           HERO PROFILE
+        ===================================================== */
+
+        .hero-image {
+
+            display: flex;
+
+            justify-content: center;
+
+            animation: fadeRight 1s ease;
+
+        }
+
+
+        @keyframes fadeRight {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateX(35px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateX(0);
+
+            }
+
+        }
+
+
+        .profile-wrapper {
+
+            position: relative;
+
+        }
+
+
+        .profile {
+
+            width: 270px;
+
+            height: 270px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #38bdf8;
+
+            padding: 6px;
+
+            background: #020617;
+
+            box-shadow:
+
+                0 0 35px rgba(56,189,248,0.45),
+
+                0 0 90px rgba(56,189,248,0.12);
+
+            animation: float 4s ease-in-out infinite;
+
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-12px);
+
+            }
+
+        }
+
+
+        .electric-orbit {
+
+            position: absolute;
+
+            width: 320px;
+
+            height: 320px;
+
+            border: 1px dashed rgba(56,189,248,0.35);
+
+            border-radius: 50%;
+
+            top: -25px;
+
+            left: -25px;
+
+            animation: rotate 12s linear infinite;
+
+        }
+
+
+        @keyframes rotate {
+
+            from {
+
+                transform: rotate(0deg);
+
+            }
+
+            to {
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           QUICK INFO
+        ===================================================== */
+
+        .quick-info {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 25px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .info-item {
+
+            padding: 10px 14px;
+
+            background: rgba(15,23,42,0.7);
+
+            border: 1px solid rgba(148,163,184,0.12);
+
+            border-radius: 10px;
+
+            color: #cbd5e1;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+
+            padding: 110px 8%;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 38px;
+
+            color: #38bdf8;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .section-subtitle {
+
+            text-align: center;
+
+            max-width: 650px;
+
+            margin: 0 auto 50px;
+
+            color: #64748b;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           GLASS CARD
+        ===================================================== */
+
+        .glass {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            background: rgba(15,23,42,0.65);
+
+            border: 1px solid rgba(148,163,184,0.12);
+
+            border-radius: 22px;
+
+            backdrop-filter: blur(14px);
+
+            box-shadow:
+
+                0 20px 50px rgba(0,0,0,0.18);
+
+        }
+
+
+        .glass p {
+
+            color: #cbd5e1;
+
+            line-height: 1.8;
+
+            font-size: 17px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .stats {
+
+            max-width: 1000px;
+
+            margin: 0 auto 40px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .stat-card {
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            background: rgba(15,23,42,0.65);
+
+            border: 1px solid rgba(148,163,184,0.1);
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .stat-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #38bdf8;
+
+        }
+
+
+        .stat-number {
+
+            color: #38bdf8;
+
+            font-size: 34px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .stat-label {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .timeline {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            border-left: 2px solid #38bdf8;
+
+            padding-left: 30px;
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            background: rgba(15,23,42,0.7);
+
+            padding: 25px;
+
+            margin-bottom: 25px;
+
+            border-radius: 15px;
+
+            border: 1px solid rgba(148,163,184,0.1);
+
+            transition: 0.3s;
+
+        }
+
+
+        .timeline-item:hover {
+
+            transform: translateX(8px);
+
+            border-color: #38bdf8;
+
+        }
+
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 13px;
+
+            height: 13px;
+
+            background: #38bdf8;
+
+            border-radius: 50%;
+
+            left: -38px;
+
+            top: 30px;
+
+            box-shadow:
+
+                0 0 15px #38bdf8;
+
+        }
+
+
+        .timeline-item h3 {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .timeline-item p {
+
+            color: #94a3b8;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills-grid {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .skill-card {
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: rgba(15,23,42,0.7);
+
+            border: 1px solid rgba(148,163,184,0.12);
+
+            border-radius: 18px;
+
+            transition: 0.35s;
+
+        }
+
+
+        .skill-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #38bdf8;
+
+            box-shadow:
+
+                0 15px 35px rgba(56,189,248,0.12);
+
+        }
+
+
+        .skill-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .skill-card h3 {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .skill-card p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =====================================================
+           SKILL BARS
+        ===================================================== */
+
+        .skill-bars {
+
+            max-width: 850px;
+
+            margin: 50px auto 0;
+
+        }
+
+
+        .skill-bar {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .skill-bar-title {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 8px;
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+        }
+
+
+        .bar {
+
+            width: 100%;
+
+            height: 9px;
+
+            background: #1e293b;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+        }
+
+
+        .bar span {
+
+            display: block;
+
+            height: 100%;
+
+            border-radius: 10px;
+
+            background: #38bdf8;
+
+            width: 0;
+
+            transition: width 1.5s ease;
+
+        }
+
+
+        .bar.python span {
+            width: 70%;
+        }
+
+
+        .bar.programming span {
+            width: 65%;
+        }
+
+
+        .bar.web span {
+            width: 60%;
+        }
+
+
+        .bar.electrical span {
+            width: 85%;
+        }
+
+
+        /* =====================================================
+           LEARNING
+        ===================================================== */
+
+        .learning-grid {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+        }
+
+
+        .learning-item {
+
+            padding: 15px 22px;
+
+            background: #0f172a;
+
+            border: 1px solid #334155;
+
+            border-radius: 12px;
+
+            color: #cbd5e1;
+
+            transition: 0.3s;
+
+        }
+
+
+        .learning-item:hover {
+
+            background: #38bdf8;
+
+            color: #020617;
+
+            transform: translateY(-5px);
+
+        }
+
+
+        /* =====================================================
+           CAREER FOCUS
+        ===================================================== */
+
+        .career-grid {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .career-card {
+
+            padding: 30px;
+
+            background:
+
+                linear-gradient(
+
+                    145deg,
+
+                    rgba(14,165,233,0.1),
+
+                    rgba(99,102,241,0.06)
+
+                );
+
+            border: 1px solid rgba(56,189,248,0.16);
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .career-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #38bdf8;
+
+        }
+
+
+        .career-icon {
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .career-card h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .career-card p {
+
+            color: #94a3b8;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           PROJECT
+        ===================================================== */
+
+        .project-card {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            background:
+
+                linear-gradient(
+
+                    145deg,
+
+                    rgba(14,165,233,0.12),
+
+                    rgba(99,102,241,0.08)
+
+                );
+
+            border: 1px solid rgba(56,189,248,0.2);
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            transition: 0.4s;
+
+        }
+
+
+        .project-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #38bdf8;
+
+            box-shadow:
+
+                0 20px 50px rgba(56,189,248,0.15);
+
+        }
+
+
+        .project-card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .project-card p {
+
+            color: #94a3b8;
+
+            line-height: 1.7;
+
+        }
+
+
+        .project-status {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            background: rgba(34,197,94,0.1);
+
+            color: #4ade80;
+
+            border: 1px solid rgba(74,222,128,0.2);
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-box {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 45px;
+
+            background: rgba(15,23,42,0.7);
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(148,163,184,0.12);
+
+        }
+
+
+        .email {
+
+            color: #38bdf8;
+
+            font-size: 19px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =====================================================
+           REVEAL
+        ===================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+
+                opacity 0.8s ease,
+
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           SCROLL TOP
+        ===================================================== */
+
+        #topButton {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #38bdf8;
+
+            color: #020617;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 999;
+
+            box-shadow:
+
+                0 5px 20px rgba(56,189,248,0.3);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            background: #020617;
+
+            border-top: 1px solid rgba(255,255,255,0.07);
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .hero-container {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+            }
+
+
+            .hero-text {
+
+                order: 2;
+
+            }
+
+
+            .hero-image {
+
+                order: 1;
+
+            }
+
+
+            .hero-description {
+
+                margin: auto;
+
+            }
+
+
+            .quick-info {
+
+                justify-content: center;
+
+            }
+
+
+            .buttons {
+
+                justify-content: center;
+
+            }
+
+
+            .skills-grid,
+            .career-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            nav {
+
+                padding: 16px 6%;
+
+            }
+
+
+            .menu {
+
+                display: block;
+
+            }
+
+
+            nav ul {
+
+                display: none;
+
+                position: absolute;
+
+                top: 65px;
+
+                left: 0;
+
+                width: 100%;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                background: rgba(2,6,23,0.97);
+
+                text-align: center;
+
+            }
+
+
+            nav ul.active {
+
+                display: flex;
+
+            }
+
+
+            nav ul li {
+
+                padding: 15px;
+
+                border-bottom:
+
+                    1px solid rgba(255,255,255,0.05);
+
+            }
+
+
+            .hero {
+
+                padding-top: 110px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .hero h2 {
+
+                font-size: 20px;
+
+            }
+
+
+            .hero-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .profile {
+
+                width: 190px;
+
+                height: 190px;
+
+            }
+
+
+            .electric-orbit {
+
+                width: 230px;
+
+                height: 230px;
+
+                top: -20px;
+
+                left: -20px;
+
+            }
+
+
+            section {
+
+                padding: 80px 6%;
+
+            }
+
+
+            .section-title {
+
+                font-size: 30px;
+
+            }
+
+
+            .glass {
+
+                padding: 25px;
+
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .skills-grid,
+            .career-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .timeline {
+
+                padding-left: 25px;
+
+            }
+
+
+            .project-card,
+            .contact-box {
+
+                padding: 28px 20px;
+
+            }
+
+
+            #topButton {
+
+                right: 15px;
+
+                bottom: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav>
+
+        <div class="logo">
+            SUSHANT
+        </div>
+
+
+        <div
+            class="menu"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </div>
+
+
+        <ul id="navLinks">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#education">
+                    Education
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#career">
+                    Focus
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-container">
+
+
+            <div class="hero-text">
+
+
+                <span class="hero-tag">
+                    ⚡ B.Tech Electrical Engineering Student
+                </span>
+
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span class="blue">
+                        Sushant
+                    </span>
+
+                    👋
+
+                </h1>
+
+
+                <h2>
+                    Electrical Engineering Student & Tech Learner
+                </h2>
+
+
+                <p class="hero-description">
+
+                    I am a 6th-semester B.Tech Electrical Engineering
+                    student at GCET Kashmir. I am developing my skills
+                    in Python, programming and web development while
+                    building a strong foundation in engineering.
+
+                </p>
+
+
+                <div class="quick-info">
+
+                    <div class="info-item">
+                        🎓 GCET Kashmir
+                    </div>
+
+                    <div class="info-item">
+                        📚 6th Semester
+                    </div>
+
+                    <div class="info-item">
+                        🚀 Quick Learner
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+
+                    <a
+                        href="#about"
+                        class="button primary"
+                    >
+                        Explore My Profile
+                    </a>
+
+
+                    <a
+                        href="/resume/Sushant_Bangotra_Resume.pdf"
+                        target="_blank"
+                        class="button secondary"
+                    >
+                        📄 View Resume
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+
+                <div class="profile-wrapper">
+
+
+                    <div class="electric-orbit"></div>
+
+
+                    <img
+                        src="{{ url_for('static', filename='profile.jpg') }}"
+                        alt="Sushant Bangotra"
+                        class="profile"
+                    >
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ===================================================== -->
+
+    <section id="about">
+
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            A little about my background, interests and
+            current learning journey.
+
+        </p>
+
+
+        <div class="glass reveal">
+
+
+            <p>
+
+                Hello! I am
+                <strong>Sushant Bangotra</strong>,
+                a B.Tech student in Electrical Engineering
+                at GCET Kashmir.
+
+            </p>
+
+
+            <p>
+
+                I am currently in my 6th semester. My academic
+                journey has given me exposure to electrical
+                machines, power systems, electronics,
+                control systems and other engineering subjects.
+
+            </p>
+
+
+            <p>
+
+                Alongside engineering, I am developing my
+                programming and web-development skills.
+                I enjoy learning by building practical things.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUICK STATS
+    ===================================================== -->
+
+    <section>
+
+
+        <h2 class="section-title">
+            My Journey
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Some simple facts about where I am in my
+            learning journey.
+
+        </p>
+
+
+        <div class="stats">
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    6
+                </div>
+
+                <div class="stat-label">
+                    Current Semester
+                </div>
+
+            </div>
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    1
+                </div>
+
+                <div class="stat-label">
+                    Portfolio Project
+                </div>
+
+            </div>
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    ∞
+                </div>
+
+                <div class="stat-label">
+                    Things To Learn
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EDUCATION
+    ===================================================== -->
+
+    <section id="education">
+
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            My academic background.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item reveal">
+
+
+                <h3>
+                    B.Tech in Electrical Engineering
+                </h3>
+
+
+                <p>
+                    GCET Kashmir
+                </p>
+
+
+                <p>
+                    Currently studying — 6th Semester
+                </p>
+
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+
+                <h3>
+                    Class 12th
+                </h3>
+
+
+                <p>
+                    Percentage:
+                    <strong>61.8%</strong>
+                </p>
+
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+
+                <h3>
+                    Class 10th
+                </h3>
+
+
+                <p>
+                    Percentage:
+                    <strong>75.6%</strong>
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SKILLS
+    ===================================================== -->
+
+    <section id="skills">
+
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Technologies and abilities I am currently
+            developing.
+
+        </p>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Learning programming and practical
+                    Python development.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Electrical systems and core
+                    engineering concepts.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Building logical thinking and
+                    programming skills.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    HTML, CSS, Python and Flask-based
+                    web development.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Problem Solving
+                </h3>
+
+                <p>
+                    Analytical thinking and practical
+                    learning.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Quick Learner
+                </h3>
+
+                <p>
+                    Interested in learning new tools
+                    and technologies.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SKILL BARS -->
+
+        <div class="skill-bars reveal">
+
+
+            <div class="skill-bar">
+
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Electrical Engineering
+                    </span>
+
+                    <span>
+                        Strong Foundation
+                    </span>
+
+                </div>
+
+
+                <div class="bar electrical">
+
+                    <span></span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="skill-bar">
+
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar python">
+
+                    <span></span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="skill-bar">
+
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar programming">
+
+                    <span></span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="skill-bar">
+
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar web">
+
+                    <span></span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CAREER FOCUS
+    ===================================================== -->
+
+    <section id="career">
+
+
+        <h2 class="section-title">
+            Areas I'm Exploring
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Areas that currently interest me as I build
+            my technical career.
+
+        </p>
+
+
+        <div class="career-grid">
+
+
+            <div class="career-card reveal">
+
+
+                <div class="career-icon">
+                    ⚡
+                </div>
+
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+
+                <p>
+
+                    Building stronger knowledge of electrical
+                    systems, machines, power systems and
+                    engineering fundamentals.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="career-card reveal">
+
+
+                <div class="career-icon">
+                    🐍
+                </div>
+
+
+                <h3>
+                    Python & Programming
+                </h3>
+
+
+                <p>
+
+                    Improving programming fundamentals and
+                    learning how software can be used to
+                    solve practical problems.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="career-card reveal">
+
+
+                <div class="career-icon">
+                    🌐
+                </div>
+
+
+                <h3>
+                    Web Development
+                </h3>
+
+
+                <p>
+
+                    Learning how to build useful and
+                    professional websites using modern
+                    web technologies.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CURRENTLY LEARNING
+    ===================================================== -->
+
+    <section>
+
+
+        <h2 class="section-title">
+            Currently Learning
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Skills I am actively working on.
+
+        </p>
+
+
+        <div class="learning-grid">
+
+
+            <div class="learning-item reveal">
+                🐍 Python
+            </div>
+
+
+            <div class="learning-item reveal">
+                🌐 Web Development
+            </div>
+
+
+            <div class="learning-item reveal">
+                ⚡ Electrical Engineering
+            </div>
+
+
+            <div class="learning-item reveal">
+                💻 Programming
+            </div>
+
+
+            <div class="learning-item reveal">
+                📚 Engineering Concepts
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ===================================================== -->
+
+    <section id="projects">
+
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Projects I have worked on while developing
+            my technical skills.
+
+        </p>
+
+
+        <div class="project-card reveal">
+
+
+            <h3>
+                🌐 Personal Portfolio Website
+            </h3>
+
+
+            <p>
+
+                A personal portfolio website built using
+                Python and Flask while learning web
+                development. It presents my education,
+                skills, resume and contact information.
+
+            </p>
+
+
+            <span class="project-status">
+                🟢 Currently Building
+            </span>
+
+
+            <div class="buttons">
+
+
+                <a
+                    href="https://github.com/sushantbangotra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    💻 GitHub
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section id="contact">
+
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Interested in connecting or discussing
+            technology and engineering?
+
+        </p>
+
+
+        <div class="contact-box reveal">
+
+
+            <p class="email">
+                📧 sushantbangotra29@gmail.com
+            </p>
+
+
+            <p>
+
+                Feel free to connect with me through
+                email or my professional profiles.
+
+            </p>
+
+
+            <div class="buttons">
+
+
+                <a
+                    href="mailto:sushantbangotra29@gmail.com"
+                    class="button primary"
+                >
+                    📧 Email Me
+                </a>
+
+
+                <a
+                    href="https://github.com/sushantbangotra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    💻 GitHub
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/sushant-bangotra-820603441"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    🔗 LinkedIn
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        © 2026 Sushant Bangotra
+
+        <br>
+
+        B.Tech Electrical Engineering | GCET Kashmir ⚡
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCROLL TO TOP
+    ===================================================== -->
+
+    <button
+        id="topButton"
+        onclick="scrollToTop()"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           MOBILE MENU
+        ================================================= */
+
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        document
+            .querySelectorAll("#navLinks a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        document
+                            .getElementById("navLinks")
+                            .classList
+                            .remove("active");
+
+                    }
+                );
+
+            });
+
+
+        /* =================================================
+           SCROLL REVEAL
+        ================================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("show");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        /* =================================================
+           ACTIVE NAVIGATION
+        ================================================= */
+
+        const sections =
+            document.querySelectorAll(
+                "section[id]"
+            );
+
+
+        const navLinks =
+            document.querySelectorAll(
+                "#navLinks a"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                let current = "";
+
+
+                sections.forEach(section => {
+
+                    const sectionTop =
+                        section.offsetTop - 170;
+
+
+                    if (
+                        window.scrollY >= sectionTop
+                    ) {
+
+                        current =
+                            section.getAttribute(
+                                "id"
+                            );
+
+                    }
+
+                });
+
+
+                navLinks.forEach(link => {
+
+                    link.classList.remove(
+                        "active-link"
+                    );
+
+
+                    if (
+                        link.getAttribute("href")
+                        ===
+                        "#" + current
+                    ) {
+
+                        link.classList.add(
+                            "active-link"
+                        );
+
+                    }
+
+                });
+
+            }
+        );
+
+
+        /* =================================================
+           SCROLL TO TOP
+        ================================================= */
+
+        const topButton =
+            document.getElementById(
+                "topButton"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (
+                    window.scrollY > 500
+                ) {
+
+                    topButton.style.display =
+                        "block";
+
+                } else {
+
+                    topButton.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        function scrollToTop() {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

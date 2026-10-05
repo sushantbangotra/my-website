@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Sushant Bangotra - B.Tech Electrical Engineering student at GCET Kashmir.">
+
+    <title>
+        Sushant Bangotra | Portfolio
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            SUSHANT
+        </div>
+
+
+        <div
+            class="menu"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </div>
+
+
+        <ul id="navLinks">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#education">
+                    Education
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#focus">
+                    Focus
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-container">
+
+
+            <div class="hero-text">
+
+
+                <span class="hero-tag">
+                    ⚡ B.Tech Electrical Engineering Student
+                </span>
+
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span class="blue">
+                        Sushant
+                    </span>
+
+                    👋
+
+                </h1>
+
+
+                <h2>
+                    Electrical Engineering Student
+                    & Tech Learner
+                </h2>
+
+
+                <p class="hero-description">
+
+                    I am a 6th-semester B.Tech Electrical
+                    Engineering student at GCET Kashmir.
+                    I am developing my skills in Python,
+                    programming and web development while
+                    building a strong engineering foundation.
+
+                </p>
+
+
+                <div class="quick-info">
+
+                    <div class="info-item">
+                        🎓 GCET Kashmir
+                    </div>
+
+                    <div class="info-item">
+                        📚 6th Semester
+                    </div>
+
+                    <div class="info-item">
+                        🚀 Quick Learner
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+
+                    <a
+                        href="#about"
+                        class="button primary"
+                    >
+                        Explore My Profile
+                    </a>
+
+
+                    <a
+                        href="/resume/Sushant_Bangotra_Resume.pdf"
+                        target="_blank"
+                        class="button secondary"
+                    >
+                        📄 View Resume
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <div class="hero-image">
+
+                <div class="profile-wrapper">
+
+                    <div class="electric-orbit"></div>
+
+                    <img
+                        src="{{ url_for('static', filename='profile.jpg') }}"
+                        alt="Sushant Bangotra"
+                        class="profile"
+                    >
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            A little about my background, interests
+            and learning journey.
+
+        </p>
+
+
+        <div class="glass reveal">
+
+            <p>
+
+                Hello! I am
+                <strong>Sushant Bangotra</strong>,
+                a B.Tech student in Electrical Engineering
+                at GCET Kashmir.
+
+            </p>
+
+
+            <p>
+
+                I am currently in my 6th semester.
+                My academic journey has given me exposure
+                to electrical machines, power systems,
+                electronics, control systems and other
+                engineering subjects.
+
+            </p>
+
+
+            <p>
+
+                Alongside engineering, I am developing
+                my programming and web-development skills.
+                I enjoy learning by building practical things.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= JOURNEY ================= -->
+
+    <section>
+
+
+        <h2 class="section-title">
+            My Journey
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Where I currently stand in my learning journey.
+
+        </p>
+
+
+        <div class="stats">
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    6
+                </div>
+
+                <div class="stat-label">
+                    Current Semester
+                </div>
+
+            </div>
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    1
+                </div>
+
+                <div class="stat-label">
+                    Portfolio Project
+                </div>
+
+            </div>
+
+
+            <div class="stat-card reveal">
+
+                <div class="stat-number">
+                    ∞
+                </div>
+
+                <div class="stat-label">
+                    Things To Learn
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            My academic background.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item reveal">
+
+                <h3>
+                    B.Tech in Electrical Engineering
+                </h3>
+
+                <p>
+                    GCET Kashmir
+                </p>
+
+                <p>
+                    Currently studying — 6th Semester
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>
+                    Class 12th
+                </h3>
+
+                <p>
+                    Percentage:
+                    <strong>61.8%</strong>
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <h3>
+                    Class 10th
+                </h3>
+
+                <p>
+                    Percentage:
+                    <strong>75.6%</strong>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Technologies and abilities I am currently
+            developing.
+
+        </p>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Learning programming and practical
+                    Python development.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Electrical systems and engineering
+                    concepts.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Building logical thinking and
+                    programming skills.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    HTML, CSS, Python and Flask.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Problem Solving
+                </h3>
+
+                <p>
+                    Analytical thinking and practical
+                    learning.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Quick Learner
+                </h3>
+
+                <p>
+                    Interested in learning new tools
+                    and technologies.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SKILL BARS -->
+
+        <div class="skill-bars reveal">
+
+
+            <div class="skill-bar">
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Electrical Engineering
+                    </span>
+
+                    <span>
+                        Strong Foundation
+                    </span>
+
+                </div>
+
+
+                <div class="bar electrical">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-bar">
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar python">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-bar">
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar programming">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-bar">
+
+                <div class="skill-bar-title">
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <span>
+                        Learning
+                    </span>
+
+                </div>
+
+
+                <div class="bar web">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOCUS ================= -->
+
+    <section id="focus">
+
+
+        <h2 class="section-title">
+            Areas I'm Exploring
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Areas that currently interest me as I build
+            my technical career.
+
+        </p>
+
+
+        <div class="career-grid">
+
+
+            <div class="career-card reveal">
+
+                <div class="career-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+
+                    Building stronger knowledge of electrical
+                    systems, machines, power systems and
+                    engineering fundamentals.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-card reveal">
+
+                <div class="career-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python & Programming
+                </h3>
+
+                <p>
+
+                    Improving programming fundamentals and
+                    learning how software can solve
+                    practical problems.
+
+                </p>
+
+            </div>
+
+
+            <div class="career-card reveal">
+
+                <div class="career-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+
+                    Learning how to build useful and
+                    professional websites using modern
+                    web technologies.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= LEARNING ================= -->
+
+    <section>
+
+
+        <h2 class="section-title">
+            Currently Learning
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Skills I am actively working on.
+
+        </p>
+
+
+        <div class="learning-grid">
+
+
+            <div class="learning-item reveal">
+                🐍 Python
+            </div>
+
+
+            <div class="learning-item reveal">
+                🌐 Web Development
+            </div>
+
+
+            <div class="learning-item reveal">
+                ⚡ Electrical Engineering
+            </div>
+
+
+            <div class="learning-item reveal">
+                💻 Programming
+            </div>
+
+
+            <div class="learning-item reveal">
+                📚 Engineering Concepts
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Projects I have worked on while developing
+            my technical skills.
+
+        </p>
+
+
+        <div class="project-card reveal">
+
+
+            <h3>
+                🌐 Personal Portfolio Website
+            </h3>
+
+
+            <p>
+
+                A personal portfolio website built using
+                Python and Flask while learning web
+                development. It presents my education,
+                skills, resume and contact information.
+
+            </p>
+
+
+            <span class="project-status">
+                🟢 Currently Building
+            </span>
+
+
+            <div class="buttons">
+
+
+                <a
+                    href="https://github.com/sushantbangotra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    💻 GitHub
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Interested in connecting or discussing
+            technology and engineering?
+
+        </p>
+
+
+        <div class="contact-box reveal">
+
+
+            <p class="email">
+                📧 sushantbangotra29@gmail.com
+            </p>
+
+
+            <p>
+
+                Feel free to connect with me through
+                email or my professional profiles.
+
+            </p>
+
+
+            <div class="buttons">
+
+
+                <a
+                    href="mailto:sushantbangotra29@gmail.com"
+                    class="button primary"
+                >
+                    📧 Email Me
+                </a>
+
+
+                <a
+                    href="https://github.com/sushantbangotra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    💻 GitHub
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/sushant-bangotra-820603441"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    🔗 LinkedIn
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Sushant Bangotra
+
+        <br>
+
+        B.Tech Electrical Engineering | GCET Kashmir ⚡
+
+    </footer>
+
+
+
+    <!-- ================= SCROLL TOP ================= -->
+
+    <button
+        id="topButton"
+        onclick="scrollToTop()"
+    >
+        ↑
+    </button>
+
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>
